@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head >
+    <meta charset="utf-8" name="viewport">
+
+    <!--easyui-css-->
+    <link rel="stylesheet" type="text/css" href="framework/easyui1.3.2/themes/default/easyui.css">
+    <link rel="stylesheet" type="text/css" href="framework/easyui1.3.2/themes/icon.css">
+    <link rel="stylesheet" type="text/css" href="animations.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+   <script src="framework/require/require.js" data-main="js/main" defer async="true"></script>
+</head>
+<body ng-cloak>
+
+<div id="cc" style="width: 100%; height: 100%;">
+
+    <!-- top -->
+    <div data-options="region:'north'" style="height: 60px; width: 100%; overflow: hidden;">
+        公路网基础数据上报系统
+    </div>
+
+    <!-- bottom -->
+    <div data-options="region:'south'" style="height: 30px; width: 100%; line-height: 30px; overflow: hidden; padding: 0 10px;">
+    </div>
+
+    <!-- left -->
+    <div data-options="region:'west'" style="width: 65px; height:100%;">
+        <div>
+            <div class="index-left layer"><a ui-sref="layer">图层</a></div>
+            <div class="index-left audit"><a ui-sref="audit">审核</a></div>
+            <div class="index-left template"><a ui-sref="template">模板</a></div>
+            <div class="index-left metadata">元数据</div>
+        </div>
+    </div>
+
+    <!-- center -->
+    <div data-options="region:'center'">
+        <div id="content" class="easyui-layout" style="width: 100%; height: 100%;">
+            <div data-options="region:'west'" style="width:200px; height:100%;">
+                <div ui-view="view1"></div>
+            </div>
+            <div data-options="region:'center'" style="width:200px; height:100%;">
+                <div ui-view="view2"></div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+
+</html>
